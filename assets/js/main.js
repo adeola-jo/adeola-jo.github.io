@@ -4,6 +4,36 @@ const navMenu = document.getElementById('nav-menu'),
     navClose = document.getElementById('nav-close')
 
 
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const links = document.querySelectorAll('a');
+
+//     links.forEach(link => {
+//         link.addEventListener('click', (event) => {
+//             event.preventDefault();
+//             const href = link.getAttribute('href');
+
+//             document.body.classList.add('fade-out');
+
+//             setTimeout(() => {
+//                 window.location.href = href;
+//             }, 500); // Match the duration of the CSS transition
+//         });
+//     });
+
+//     document.body.classList.add('fade-in');
+// });
+
+
+// document.querySelector('.smooth-transition').addEventListener('click', function(event) {
+//     event.preventDefault();
+//     document.body.classList.add('fade-out');
+//     const targetUrl = this.getAttribute('href');
+//     setTimeout(function() {
+//         window.location.href = targetUrl;
+//     }, 500);
+// });
+
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
 if(navToggle){
@@ -159,6 +189,12 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
 document.addEventListener('DOMContentLoaded', function() {
     showContent('cv-projects');
 });
+
+
+
+
+// ======================  TRANSITION =========================
+
 
 /*==================== PORTFOLIO TABS ====================*/
 // const portfolioTabs = document.querySelectorAll('.portfolio__tab');

@@ -1,77 +1,1594 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Content Toggle</title>
-    <style>
-        .button-container {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--==================== UNICONS ====================-->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
+
+    <!--==================== SWIPER CSS====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Joseph Adeola</title>
+  </head>
+  <body  class="fade-in">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Port <span>folio</span></a>
         
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="uil uil-estate nav__icon"></i> Home
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="uil uil-user nav__icon"></i> About
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="uil uil-file-alt nav__icon"></i> Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">
+                <i class="uil uil-briefcase-alt nav__icon"></i> Services
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">
+                <i class="uil uil-scenery nav__icon"></i> Portfolio
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#gallery" class="nav__link">
+                <i class="uil uil-scenery nav__icon"></i> Gallery
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="uil uil-message nav__icon"></i> Contact
+              </a>
+            </li>
+          </ul>
+
+          <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+          <!-- Theme change button -->
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__social">
+              <a
+                href="https://www.linkedin.com/in/adeola-joseph/"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+
+              <!-- <a
+                href="https://www.facebook.com/joseph.adeola.58"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-facebook-f"></i>
+              </a> -->
+
+              <a
+                href="https://github.com/AdeolaJoseph"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-github-alt"></i>
+              </a>
+            </div>
+
+            <div class="home__img">
+              <!-- <svg class="home__blob" viewBox="0 0 200 187">
+                <mask id="mask0" mask-type="alpha">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+                </mask>
+                <g mask="url(#mask0)">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+
+                  <!--==================== 
+                                        Insert your image in the Img folder and Change your image |
+                                        Center your image with X: horizontal, Y: vertical 
+                                    ====================-->
+                    <!-- <image
+                    class="home__blob-img"
+                    x="12"
+                    y="18"
+                    href="assets/img/joseph-img2.jpg"
+                  />
+                </g>
+              </svg>  -->
+
+              <svg class="home__blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask1" mask-type="alpha">
+                    <path d="M50 150C50 185.228 85.2284 200 100 200C114.772 200 150 185.228 150 150C150 114.772 170 80.7715 150 50C130 19.2284 85.2284 10 50 50C14.7715 89.7715 50 114.772 50 150Z" transform="scale(1.1)"/>
+
+
+                    
+                    <!-- <path d="M37.5,-59.8C46.5,-52.5,50.4,-38.7,52,-26.4C53.5,-14,52.7,-3.3,55.3,11C57.9,25.2,64,42.9,59.8,57C55.7,71,41.3,81.4,26,83.6C10.7,85.8,-5.5,79.9,-21.6,74.7C-37.7,69.5,-53.7,65,-64.7,54.7C-75.7,44.5,-81.7,28.5,-80.9,13.5C-80.1,-1.5,-72.5,-15.6,-62.4,-24.7C-52.4,-33.9,-39.8,-38.1,-28.9,-44.6C-18.1,-51.1,-9.1,-59.9,2.6,-63.9C14.2,-67.9,28.4,-67.1,37.5,-59.8Z" transform="translate(100 100)" /> -->
+                    
+
+                    <!-- <path  d="M46.4,-71.9C58.8,-64.2,66.6,-49.1,72.1,-33.9C77.6,-18.6,80.8,-3.3,78.1,10.8C75.4,24.9,66.8,37.6,56.4,47.9C46,58.2,33.8,66,20.2,71.2C6.5,76.3,-8.7,78.9,-24,76.7C-39.3,74.5,-54.7,67.6,-63.5,55.9C-72.4,44.2,-74.7,27.6,-74.6,12.2C-74.4,-3.1,-71.7,-17.3,-67.8,-33.1C-63.9,-48.9,-58.8,-66.2,-47.3,-74.4C-35.8,-82.5,-17.9,-81.5,-0.5,-80.8C17,-80.1,34,-79.7,46.4,-71.9Z" transform="translate(100 100)" /> -->
+
+                    <!-- <path fill="#FF0066" d="M36.8,-64.8C47.4,-57.7,55.5,-47.2,65.4,-35.8C75.3,-24.5,87,-12.2,89.6,1.5C92.2,15.2,85.7,30.5,77.2,44.2C68.7,58,58.2,70.3,45,77.8C31.8,85.3,15.9,88,1,86.3C-13.9,84.5,-27.7,78.3,-40.8,70.7C-53.8,63.1,-66,54.1,-75.4,42.1C-84.8,30.1,-91.4,15.1,-89.2,1.3C-87,-12.5,-76.1,-25.1,-66.3,-36.4C-56.5,-47.7,-47.8,-57.8,-37,-64.8C-26.1,-71.8,-13.1,-75.7,0,-75.8C13.1,-75.8,26.2,-72,36.8,-64.8Z" transform="translate(100 100)" /> -->
+
+                    <!-- <path fill="#FF0066" d="M45.4,-74.2C58.7,-70.9,69.2,-58.5,74.2,-44.6C79.2,-30.7,78.7,-15.3,77.9,-0.5C77,14.4,75.9,28.8,69.1,39.6C62.4,50.5,50,57.8,37.6,62.1C25.1,66.3,12.5,67.3,-0.7,68.5C-13.8,69.6,-27.7,70.8,-39.7,66.3C-51.6,61.8,-61.7,51.6,-67.6,39.6C-73.4,27.6,-75,13.8,-75.1,0C-75.1,-13.9,-73.6,-27.8,-67.3,-38.9C-61,-50.1,-49.9,-58.6,-37.9,-62.6C-25.8,-66.7,-12.9,-66.2,1.6,-68.9C16,-71.6,32.1,-77.5,45.4,-74.2Z" transform="translate(100 100)" /> -->
+                            
+                </mask>
+                <g mask="url(#mask1)">
+                    <!-- <path
+                        d="M50 150C50 185.228 85.2284 200 100 200C114.772 200 150 185.228 150 150C150 114.772 
+                            170 80.7715 150 50C130 19.2284 85.2284 10 50 50C14.7715 89.7715 50 114.772 50 150Z" /> -->
+                    <!-- <image class="home__blob-img" x="12" y="18" href="assets/img/joseph-img2.jpg" /> -->
+                    <path d="M23.9,-32.3C32.7,-31.6,42.7,-27.8,48.5,-20.6C54.2,-13.3,55.6,-2.6,51.2,5.3C46.9,13.1,36.7,18,29.6,25C22.5,31.9,18.6,40.9,9.8,52C1,63,-12.6,76.3,-25.2,76.8C-37.8,77.3,-49.4,65,-51.5,51C-53.7,37.1,-46.5,21.4,-50.9,5.9C-55.4,-9.6,-71.6,-24.9,-68.5,-31.1C-65.4,-37.3,-42.9,-34.6,-28.3,-32.6C-13.6,-30.7,-6.8,-29.6,0.4,-30.2C7.6,-30.7,15.1,-33,23.9,-32.3Z" transform="translate(100 100)" />
+                    
+
+                    
+
+                    <image class="home__blob-img" x="12" y="18" href="assets/img/joseph-img2.jpg" />
+                    <!-- <image class="home__blob-img" x="12" y="18" href="assets/img/joseph1-removebg-preview4.png" /> -->
+                </g>
+            </svg>
+            
+            </div>
+
+            <div class="home__data">
+              <!-- <h1 class="home__title">Hi, I'm Joseph</h1> -->
+              <h1 class="home__title">Hey there! I'm Joseph! 👋</h1>
+
+              <h3 class="home__subtitle">A Robotics Software Engineer</h3>
+              <p class="home__description">
+
+                Welcome to my site! 🤖 Feel free to explore and learn more about what I do. 💻 Let's connect if you find something interesting! 🚀
+
+              </p>
+              <a href="#contact" class="button button--flex">
+                Contact Me <i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="home__scroll">
+            <a href="#about" class="home__scroll-button button--flex">
+              <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+              <span class="home__scroll-name">Scroll down</span>
+              <i class="uil uil-arrow-down home__scroll-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== ABOUT ====================-->
+      <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle">Erasmus+ Awardee</span>
+
+        <div class="about__container container grid">
+          <!-- <img src="assets/img/joseph-img.jpg" alt="" class="about__img" /> -->
+          <!-- <img src="assets/img/joseph1-removebg-preview4.png" alt="" class="about__img" /> -->
+          <img src="assets/img/img1.jpeg" alt="" class="about__img" />
+
+          <!-- <img src="assets/img/joseph1.jpeg" alt="" class="about__img" /> -->
+
+
+
+          <div class="about__data">
+            <p class="about__description" style="text-align: justify; text-justify: inter-word; hyphens: auto;">
+                As an AI Engineer and Robotics Software Developer, I'm driven by a deep fascination with how technology can enhance human potential. My journey through the Erasmus Mundus program wasn't just about acquiring technical skills – it was a transformative experience that opened my eyes to diverse perspectives and collaborative innovation across cultures.
+                What excites me most is the challenge of making robots and AI systems more intuitive and beneficial to society. Whether I'm working on autonomous exploration or developing medical imaging models, I'm always thinking about the real-world impact and how we can push the boundaries of what's possible.
+                Outside of my professional endeavors, I'm an avid sci-fi enthusiast – these stories of imagined futures constantly spark new ideas for my work. I cherish moments spent with friends and family, believing that strong personal connections make us better innovators and collaborators.
+          </p>
+          
+
+            <div class="about__info">
+              <div>
+                <span class="about__info-title">1+</span>
+                <span class="about__info-name"
+                  >Years <br />
+                  experience</span
+                >
+              </div>
+
+              <div>
+                <span class="about__info-title">5+</span>
+                <span class="about__info-name"
+                  >Completed <br />
+                  projects</span
+                >
+              </div>
+
+              <div>
+                <span class="about__info-title">2</span>
+                <span class="about__info-name"
+                  >Companies <br />
+                  worked</span
+                >
+              </div>
+            </div>
+
+            <div class="about__buttons">
+              <!--==================== Change your CV ====================-->
+              <a
+                download=""
+                href="assets/pdf/joseph_cv.pdf"
+                class="button button--flex"
+              >
+                Download CV <i class="uil uil-download-alt button__icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== SKILLS ====================-->
+      <section class="skills section" id="skills">
+        <h2 class="section__title">Technical Skills</h2>
+        <span class="section__subtitle"></span>
+
+        <div class="skills__container container grid">
+          <div>
+
+                <!--=============== SKILLS 1 ===============-->
+                <div class="skills__content skills__close">
+                  <div class="skills__header">
+                    <i class="uil uil-robot skills__icon"></i>
+    
+                    <div>
+                      <h1 class="skills__title">Robotics & Vision</h1>
+                      <span class="skills__subtitle">More than 1 year</span>
+                    </div>
+    
+                    <i class="uil uil-angle-down skills__arrow"></i>
+                  </div>
+    
+                  <div class="skills__list grid">
+                    <div class="skills__data">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">SLAM</h3>
+                        <span class="skills__number">85%</span>
+                      </div>
+                      <div class="skills__bar">
+                        <span class="skills__percentage skills__php"></span>
+                      </div>
+                    </div>
+                    <div class="skills__data">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Perception and Planning</h3>
+                        <span class="skills__number">80%</span>
+                      </div>
+                      <div class="skills__bar">
+                        <span class="skills__percentage skills__php"></span>
+                      </div>
+                    </div>
+                    
+    
+                    <div class="skills__data">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">ROS</h3>
+                        <span class="skills__number">55%</span>
+                      </div>
+                      <div class="skills__bar">
+                        <span class="skills__percentage skills__python"></span>
+                      </div>
+                    </div>
+    
+                    <div class="skills__data">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Gazebo</h3>
+                        <span class="skills__number">55%</span>
+                      </div>
+                      <div class="skills__bar">
+                        <span class="skills__percentage skills__python"></span>
+                      </div>
+                    </div>
+    
+                    <div class="skills__data">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Stonefish</h3>
+                        <span class="skills__number">70%</span>
+                      </div>
+                      <div class="skills__bar">
+                        <span class="skills__percentage skills__python"></span>
+                      </div>
+                    </div>
+    
+                    <div class="skills__data">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">OpenCV</h3>
+                        <span class="skills__number">70%</span>
+                      </div>
+                      <div class="skills__bar">
+                        <span class="skills__percentage skills__node"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+    
+            <!--=============== SKILLS 2 ===============-->
+            <div class="skills__content skills__close">
+              <div class="skills__header">
+                <i class="uil uil-processor skills__icon"></i>
+
+                <div>
+                  <h1 class="skills__title">Deep Learning</h1>
+                  <span class="skills__subtitle">More than 1 year</span>
+                </div>
+
+                <i class="uil uil-angle-down skills__arrow"></i>
+              </div>
+
+              <div class="skills__list grid">
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">CNN</h3>
+                    <span class="skills__number">80%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__html"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">PyTorch and PyTorch3D</h3>
+                    <span class="skills__number">60%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__css"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Keras & TensorFlow</h3>
+                    <span class="skills__number">25%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__react"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
         
-        .content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-            margin-top: 20px;
-        }
+          <div>
+            <!--=============== SKILLS 3 ===============-->
+            <div class="skills__content skills__close">
+              <div class="skills__header">
+                <i class="uil uil-circuit skills__icon"></i>
+
+                <div>
+                  <h1 class="skills__title">Machine Learning</h1>
+                  <span class="skills__subtitle">More than 2 years</span>
+                </div>
+
+                <i class="uil uil-angle-down skills__arrow"></i>
+              </div>
+
+              <div class="skills__list grid">
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Algorithms</h3>
+                    <span class="skills__number">90%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__figma"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Scikit-Learn</h3>
+                    <span class="skills__number">70%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__sketch"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Matplotlib</h3>
+                    <span class="skills__number">80%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__photoshop"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Numpy and Pandas</h3>
+                    <span class="skills__number">80%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__photoshop"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--=============== SKILLS 4 ===============-->
+            <div class="skills__content skills__close">
+              <div class="skills__header">
+                <i class="uil uil-brackets-curly skills__icon"></i>
+
+                <div>
+                  <h1 class="skills__title">Programming Languages</h1>
+                  <span class="skills__subtitle"></span>
+                </div>
+
+                <i class="uil uil-angle-down skills__arrow"></i>
+              </div>
+
+              <div class="skills__list grid">
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Python</h3>
+                    <span class="skills__number">90%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__figma"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">C++</h3>
+                    <span class="skills__number">55%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__python"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">R</h3>
+                    <span class="skills__number">50%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__sketch"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--=============== SKILLS 5 ===============-->
+          <div class="skills__content skills__close">
+            <div class="skills__header">
+              <i class="uil uil-icons skills__icon"></i>
+
+              <div>
+                <h1 class="skills__title">Miscellaneous Tools</h1>
+                <span class="skills__subtitle"></span>
+              </div>
+
+              <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Docker</h3>
+                  <span class="skills__number">25%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__react"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">MS Office Suites</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__react"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Git</h3>
+                  <span class="skills__number">70%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__sketch"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">Latex</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__figma"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div></div>
+        </div>
+      </section>
+
+      <!--==================== QUALIFICATION ====================-->
+      <section class="qualification section">
+        <h2 class="section__title">Qualification</h2>
+        <span class="section__subtitle">My personal journey</span>
+
+        <div class="qualification__container container">
+          <div class="qualification__tabs">
+            <div
+              class="qualification__button button--flex qualification__active"
+              data-target="#education"
+            >
+              <i class="uil uil-graduation-cap qualification__icon"></i>
+              Education
+            </div>
+
+            <div class="qualification__button button--flex" data-target="#work">
+              <i class="uil uil-briefcase-alt qualification__icon"></i>
+              Work
+            </div>
+          </div>
+
+          <div class="qualification__sections">
+            <!--=============== QUALIFICATION CONTENT 1 ===============-->
+            <div
+              class="qualification__content qualification__active"
+              data-content
+              id="education"
+            >
+              <!--=============== QUALIFICATION 1 ===============-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">EMJ MEng.</h3>
+                  <span class="qualification__subtitle"
+                    >Intelligent Field Robotic Systems</span
+                  >
+                  <span class="qualification__subtitle">University of Zagreb, Croatia.</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2023 - 2024
+                  </div>
+                  <span class="qualification__subtitle"></span>
+                  <span class="qualification__subtitle"
+                    >University of Girona, Spain.</span>
+                    <div class="qualification__calendar">
+                      <i class="uil uil-calendar-alt"></i>
+                      2022 - 2023
+                    </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--=============== QUALIFICATION 2 ===============-->
+              <div class="qualification__data">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">BSc Hons.</h3>
+                  <span class="qualification__subtitle">Mathematics</span>
+                  <span class="qualification__subtitle"> University of Ilorin, Nigeria</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2016 - 2021
+                  </div>
+
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    Honors: Dean's List, Class Valedictorian
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--=============== QUALIFICATION CONTENT 2 ===============-->
+            <div class="qualification__content" data-content id="work">
+              <!--=============== QUALIFICATION Current ===============-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Deep Learning Research Intern</h3>
+                  <span class="qualification__subtitle"
+                    >VICOROB - Spain</span
+                  >
+                  <span class="qualification__subtitle"
+                    >The goal of the internship was to develop a CNN-RNN based model for 
+                  </span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    Jun 2023 - Sept 2023
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--=============== QUALIFICATION 2 ===============-->
+              <div class="qualification__data">
+                <div></div>
+
+                <div class="qualification__time">
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Financial Risk Management Intern</h3>
+                  <span class="qualification__subtitle"
+                    >KPMG Professional Services - Nigeria</span
+                  >
+                  <span class="qualification__subtitle"
+                    > Built software for financial risk management
+                  </span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    Feb 2022 - Sept 2022
+                  </div>
+                </div>
+              </div>
+
+              <!--=============== QUALIFICATION 1 ===============-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Graduate Research Assistant</h3>
+                  <span class="qualification__subtitle"
+                    >University of Ilorin - Nigeria</span
+                  >
+                  <span class="qualification__subtitle">
+                    Conducted <strong>research in atmospheric</strong> and built<strong>software for data cleaning</strong>.</span> 
+                  </span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    Aug 2021 - Nov 2021
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- ########################################################### SERVICES SERVICES ########################################################### -->
+      
+      <section class="services section" id="services">
+        <h2 class="section__title">Services</h2>
+        <span class="section__subtitle">What I offer</span>
+
+        <div class="services__container container grid">
+          
+          <div class="services__content">
+            <div>
+              <i class="uil uil-web-grid services__icon"></i>
+              <h3 class="services__title">
+                Software <br />
+                Development
+              </h3>
+            </div>
+            <span
+              class="button button--flex button--small button--link services__button"
+            >
+              View More
+              <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <h4 class="services__modal-title">
+                  Ui/Ux <br />
+                  Designer
+                <i class="uil uil-times services__modal-close"></i>
+
+                <ul class="services__modal-services grid">
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I develop the user interface.</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Deep learning pipelines</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I create custom computer vision projects</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I position your company brand.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="services__content">
+            <div>
+              <i class="uil uil-arrow services__icon"></i>
+              <h3 class="services__title">
+                Frontend <br />
+                Development
+              </h3>
+            </div>
+
+            <span
+              class="button button--flex button--small button--link services__button"
+            >
+              View More
+              <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <h4 class="services__modal-title">
+                  Frontend <br />
+                  Development
+                </h4>
+                <i class="uil uil-times services__modal-close"></i>
+
+                <ul class="services__modal-services grid">
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I develop the user interface.</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Web page development.</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I create ux element interactions.</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I position your company brand.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="services__content">
+            <div>
+              <i class="uil uil-pen services__icon"></i>
+              <h3 class="services__title">
+                Brand <br />
+                Design
+              </h3>
+            </div>
+
+            <span
+              class="button button--flex button--small button--link services__button"
+            >
+              View More
+              <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <h4 class="services__modal-title">
+                  Brand <br />
+                  Design
+                </h4>
+                <i class="uil uil-times services__modal-close"></i>
+
+                <ul class="services__modal-services grid">
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I develop the user interface.</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Web page development.</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I create ux element interactions.</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I position your company brand.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ########################################################################################################################### -->
+
+
+
+
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section__title">Portfolio</h2>
+        <span class="section__subtitle">Recent Projects</span>
+
+
+      <!-- Portfolio Tabs -->
+      <div class="portfolio__tabs">
+        <button onclick="showContent('cv-projects')" class="portfolio__tab portfolio__tab--active" >Computer Vision</button>
+        <button onclick="showContent('slam-projects')" class="portfolio__tab">SLAM</button>
+        <button onclick="showContent('dl-projects')" class="portfolio__tab">Deep Learning</button>
+        <button onclick="showContent('robotics')" class="portfolio__tab">Robotics</button>
+        <button onclick="showContent('robotics-projects')" class="portfolio__tab">Others</button>
+
+      </div>
+
+      <!-- <div class="portfolio__tabs">
+        <a href="javascript:void(0);" onclick="showContent('cv-projects');" class="portfolio__tab portfolio__tab--active">Computer Vision</a>
+        <a href="javascript:void(0);" onclick="showContent('slam-projects');" class="portfolio__tab">SLAM</a>
+        <a href="javascript:void(0);" onclick="showContent('dl-projects');" class="portfolio__tab">Deep Learning</a>
+        <a href="javascript:void(0);" onclick="showContent('robotics');" class="portfolio__tab">Robotics</a>
+        <a href="javascript:void(0);" onclick="showContent('robotics');" class="portfolio__tab">Others</a>
+      </div> -->
+      
+
+      <div id="cv-projects" class="portfolio__container container swiper-container toggle-content tab--active">
+          <div class="swiper-wrapper">
+
+            <!--=============== CV Project 1 ===============-->
+            <div class="portfolio__content grid swiper-slide">
+              <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                  Stereo Visual Odometry on the KITTI Dataset
+                </h3>
+                <p class="portfolio__description">
+                  Description: This project focuses on reconstruction of vehicle tr
+                </p>
+<!-- Code Button with GitHub Icon -->
+                <a href="https://github.com/AdeolaJoseph/Stereo-Visual-Odometry" target="_blank" class="button button--flex button--small portfolio__button">
+                  <i class="fab fa-github"></i> Code
+                </a>
+
+                <!-- Report Button (assuming you might want a file icon or similar) -->
+                <!-- <a href="https://www.sciencedirect.com/science/article/pii/S221067072030593X" target="_blank" class="button button--flex button--small portfolio__button">
+                  <i class="fas fa-file-alt"></i> Report
+                </a>
+
+                <a href="https://www.sciencedirect.com/science/article/pii/S221067072030593X" target="_blank" class="button button--flex button--small portfolio__button">
+                  <i class="fas fa-file-alt"></i> Slides
+                </a> -->
+
+
+              </div>
+            </div>
+
+             <!--=============== CV Project 2 ===============-->
+             <div class="portfolio__content grid swiper-slide">
+              <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                  Integrated Machine Vision Application with the Stäubli TX60 Robot
+                </h3>
+                <p class="portfolio__description">
+                  Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
+                </p>
+                <a
+                  href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Demo
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+     
+
+      <!-- ========================= SLAM Projects ========================= -->
+      <div id="slam-projects" class="portfolio__container container swiper-container toggle-content tab--active">
+        <div class="swiper-wrapper">
+
+          <!--=============== CV Project 1 ===============-->
+          <div class="portfolio__content grid swiper-slide">
+            
+            <img
+            src="assets/img/paperCov.jpg"
+            alt=""
+            class="portfolio__img"
+          />
+
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">
+                EKF-SLAM Implementation with 2D LiDAR and IMU sensors
+              </h3>
+              <p class="portfolio__description">
+                Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
+              </p>
+              <a
+                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
+                class="button button--flex button--small portfolio__button"
+              >
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
+
+           <!--=============== CV Project 2 ===============-->
+           <div class="portfolio__content grid swiper-slide">
+            <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">
+                EKF-SLAM Implementation with 2D LiDAR and IMU sensors
+              </h3>
+              <p class="portfolio__description">
+                Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
+              </p>
+              <a
+                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
+                class="button button--flex button--small portfolio__button"
+              >
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next">
+          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+   
+
+
+
+      
         
-        .active {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <div class="button-container">
-        <button onclick="showContent(1)">Button 1</button>
-        <button onclick="showContent(2)">Button 2</button>
-        <button onclick="showContent(3)">Button 3</button>
-        <button onclick="showContent(4)">Button 4</button>
-    </div>
+      <!-- ========================== DEEP LEARNING PROJECTS ========================= -->
+      <div id="dl-projects" class="portfolio__container container swiper-container toggle-content tab--active">
+        <div class="swiper-wrapper">
 
-    <div id="content1" class="content">
-        <h2>Content 1</h2>
-        <p>This is the content for button 1.</p>
-    </div>
+          <!--=============== CV Project 1 ===============-->
+          <div class="portfolio__content grid swiper-slide">
+            
+            <img
+            src="assets/img/paperCov.jpg"
+            alt=""
+            class="portfolio__img"
+          />
 
-    <div id="content2" class="content">
-        <h2>Content 2</h2>
-        <p>This is the content for button 2.</p>
-    </div>
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">
+                EKF-SLAM Implementation with 2D LiDAR and IMU sensors
+              </h3>
+              <p class="portfolio__description">
+                Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
+              </p>
+              <a
+                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
+                class="button button--flex button--small portfolio__button"
+              >
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
 
-    <div id="content3" class="content">
-        <h2>Content 3</h2>
-        <p>This is the content for button 3.</p>
-    </div>
+           <!--=============== CV Project 2 ===============-->
+           <div class="portfolio__content grid swiper-slide">
+            <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">
+                EKF-SLAM Implementation with 2D LiDAR and IMU sensors
+              </h3>
+              <p class="portfolio__description">
+                Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
+              </p>
+              <a
+                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
+                class="button button--flex button--small portfolio__button"
+              >
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next">
+          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+   
 
-    <div id="content4" class="content">
-        <h2>Content 4</h2>
-        <p>This is the content for button 4.</p>
-    </div>
 
-    <script>
-        function showContent(contentNumber) {
-            // Hide all content divs
-            var contents = document.getElementsByClassName('content');
-            for (var i = 0; i < contents.length; i++) {
-                contents[i].classList.remove('active');
-            }
+      <!-- ==================== ROBOTICS PROJECTS ================= -->
+      <div id="robotics" class="portfolio__container container swiper-container toggle-content tab--active">
+        <div class="swiper-wrapper">
 
-            // Show the selected content
-            var selectedContent = document.getElementById('content' + contentNumber);
-            selectedContent.classList.add('active');
-        }
+          <!--=============== CV Project 1 ===============-->
+          <div class="portfolio__content grid swiper-slide">
+            
+            <img
+            src="assets\projects\robotics\human-swarm-interaction-using-llms\HRI_Pipeline.png"
+            alt=""
+            class="portfolio__img"
+          />
 
-        // Show the first content by default
-        showContent(1);
-    </script>
-</body>
+            <div class="portfolio__data">
+              <a href="projects/multi-llm.html">
+                <h3 class="portfolio__title">
+                    Multi-Modal Human-Swarm Interaction Using Vision, Speech & Multi-Agent LLMs
+                </h3>
+            </a>
+            
+              <p class="portfolio__description">
+                Description: Controlling a swarm of omnidirectional robots using multi-modal techniques.
+              </p>
+              <a href="https://drive.google.com/drive/folders/1XM-vsduA-TXC_88UCu2qsBz0QXbR68oI" target="_blank" class="button button--flex button--small portfolio__button">
+                <i class="fab fa-github"></i> Demo
+              </a>
+
+              <!-- Report Button (assuming you might want a file icon or similar) -->
+              <a href="https://drive.google.com/file/d/1h6QMTAdxbi3cnmJCeh4XR5vvBq08i8Fl/view" target="_blank" class="button button--flex button--small portfolio__button">
+                <i class="fas fa-file-alt"></i> Report
+              </a>
+
+              <a href="https://docs.google.com/presentation/d/1ZfhdezTUXDK6KagSSJFdSf0vnmEyWE0-/edit#slide=id.p1" target="_blank" class="button button--flex button--small portfolio__button">
+                <i class="fas fa-file-alt"></i> Slides
+              </a>
+
+            </div>
+          </div>
+
+           <!--=============== Robotics Project 3 ===============-->
+           <div class="portfolio__content grid swiper-slide">
+            <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">
+              Robust Coordination and Control of Multi-Robot Systems Using Consensus Protocols
+              </h3>
+              <p class="portfolio__description">
+                Developed consensus-based control strategies for multi-robot systems, focusing on rendezvous and formation control, using graph theory and dual simulations with Pygame, Stage Simulator, and ROS
+              </p>
+              <a
+                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
+                class="button button--flex button--small portfolio__button"
+              >
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
+   
+      <!-- ROS Package for Spawning Multiple Robots in Gazebo -->
+      <div class="portfolio__content grid swiper-slide">
+        <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
+        <div class="portfolio__data">
+          <h3 class="portfolio__title">
+            ROS Package for Spawning Multiple Robots in Gazebo
+          </h3>
+          <p class="portfolio__description">
+            
+          </p>
+          <a
+            href="https://github.com/MosesEbere/gazebo_multi_robot_spawn"
+            class="button button--flex button--small portfolio__button"
+          >
+            Code
+            <i class="uil uil-arrow-right button__icon"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- ROS Package for Spawning Multiple Robots in Gazebo -->
+      <div class="portfolio__content grid swiper-slide">
+        <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
+        <div class="portfolio__data">
+          <h3 class="portfolio__title">
+            Autonomous Exploration, Localization, Mapping, Perception, and Manipulation
+          </h3>
+          <p class="portfolio__description">
+            
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1LZKQDQFDvICbNO9TPoZ9PdlU2wQQhSYe/view"
+            class="button button--flex button--small portfolio__button"
+          >
+            Simulation 
+            <i class="uil uil-arrow-right button__icon"></i>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1V2GTVkTomQQViEsOUmajFos93Ll_3ju4/view"
+            class="button button--flex button--small portfolio__button"
+          >
+            Deployment
+            <i class="uil uil-arrow-right button__icon"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio__content grid swiper-slide">
+          <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">
+              Controlling a Swarm of Omnidirectional Robots in a Simulator Using Reynolds’ Rules
+            </h3>
+            <p class="portfolio__description">
+              
+            </p>
+            <a
+              href="https://github.com/KhAlamdar11/ReynoldsSwarmSim"
+              class="button button--flex button--small portfolio__button"
+            >
+              Code
+            </a>
+            <a
+              href="https://docs.google.com/presentation/d/1aDjviKdi5GM9d_JgCk9qEbm-q0vmppn6QXxR2qgRIuA/edit#slide=id.p1"
+              class="button button--flex button--small portfolio__button"
+            >
+              Project Page
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1AU1p8NbJkrCIrgaVI7rVj1MP6kr288h8/view"
+              class="button button--flex button--small portfolio__button"
+            >
+              Paper
+            </a>
+          </div>
+        </div>
+
+
+        <div class="portfolio__content grid swiper-slide">
+          <img
+          src="assets\projects\robotics\industrial-robots\machine-vision-application.webp"
+          alt=""
+          class="portfolio__img"
+        />
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">
+              Integrated Machine Vision Application with the Stäubli TX60 Robot
+            </h3>
+            <p class="portfolio__description">
+              
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1Qt3sHE5qjNmcZQxpsC_hMEyIe0jYCMcI/view"
+              class="button button--flex button--small portfolio__button"
+            >
+              Demo
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1aUCzHSmlDRThpmZoUU5Uk83FfAI0ACnv/view"
+              class="button button--flex button--small portfolio__button"
+            >
+              Report
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio__content grid swiper-slide">
+          <img
+          src="assets\projects\robotics\industrial-robots\tx-60-robot.webp"
+          alt=""
+          class="portfolio__img"
+        />
+
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">
+              Pick and Place Application with the Stäubli TX60 Robot
+            </h3>
+            <p class="portfolio__description">
+              
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1aKrhzGyr0Auz40XHXGWk59_aASbLIbHi/view"
+              class="button button--flex button--small portfolio__button"
+            >
+              Demo
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1aPr91n5oAYynJxZ6tkZL88Wp2k3vadhR/view"
+              class="button button--flex button--small portfolio__button"
+            >
+              Report
+            </a>
+          </div>
+        </div>
+        <div class="portfolio__content grid swiper-slide">
+          <img
+          src="assets\projects\robotics\industrial-robots\ts60-robot.webp"
+          alt=""
+          class="portfolio__img"
+        />
+
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">
+              Pick and Place Application with the Stäubli TS60 Robot
+            </h3>
+            <p class="portfolio__description">
+              
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1aKQZmrNwI2H5UhDMYRUBBaicdBn9iq9I/view"
+              class="button button--flex button--small portfolio__button"
+            >
+              Demo
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1aPR2mKm8HVClOIRoVWpmKaSMeXWIaC-c/view"
+              class="button button--flex button--small portfolio__button"
+            >
+              Report
+            </a>
+          </div>
+        </div>
+
+
+
+        </div>
+        <div class="swiper-button-next">
+          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+  
+
+
+      </section>
+
+
+
+
+      <!--==================== PROJECT IN MIND ====================
+      <section class="project section">
+        <div class="project__bg">
+          <div class="project__container container grid">
+            <div class="project__data">
+              <h2 class="project__title">You have a new project</h2>
+              <p class="project__description">
+                Contact me now and get a 30% discount on your new project.
+              </p>
+              <a href="#" class="button button--flex button--white">
+                Contact Me
+                <i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
+
+            <img src="assets/img/project.png" alt="" class="project__img" />
+          </div>
+        </div>
+      </section>
+-->
+
+
+      <!--==================== TESTIMONIAL ====================-->
+      <section class="testimonial section">
+        <h2 class="section__title">Achievements</h2>
+        <span class="section__subtitle"></span>
+
+        <div class="testimonial__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!--=============== TESTIMONIAL 1 ===============-->
+            <div class="testimonial__content swiper-slide">
+              <div class="testimonial__data">
+                <div class="testimonial__header">
+                  <img
+                    src="assets/img/trophy.png"
+                    alt=""
+                    class="testimonial__img"
+                  />
+
+                  <div>
+                    <h3 class="testimonial__name">Overall Best Graduating Student 2021</h3>
+                    <!-- University Valedictorian -->
+                    <span class="testimonial__client"
+                      >University of Ilorin, Nigeria.</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <p class="testimonial__description">
+                Distinguished as the University Valedictorian, graduating as the best student amongst a cohort of 9,388 graduates, exemplifying outstanding academic excellence, leadership and commitment to learning throughout the course of study.
+              </p>
+            </div>
+
+            <!--=============== TESTIMONIAL 2 ===============-->
+            <div class="testimonial__content swiper-slide">
+              <div class="testimonial__data">
+                <div class="testimonial__header">
+                  <img
+                    src="assets/img/bronze-medal.png"
+                    alt=""
+                    class="testimonial__img"
+                  />
+
+                  <div>
+                    <h3 class="testimonial__name">
+                      International Youth Mathematics Challenge 2019
+                    </h3>
+                    <span class="testimonial__client">2nd runner up</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="testimonial__description">
+                Awarded a Bronze Medal for demonstrating exceptional problem-solving skills and mathematical acumen in a competitive international environment, reflecting a high level of understanding and proficiency in mathematics.
+              </p>
+            </div>
+
+            <!--=============== TESTIMONIAL 3 ===============-->
+            <div class="testimonial__content swiper-slide">
+              <div class="testimonial__data">
+                <div class="testimonial__header">
+                  <img
+                    src="assets/img/ni.jpeg"
+                    alt=""
+                    class="testimonial__img"
+                  />
+
+                  <div>
+                    <h3 class="testimonial__name">NIIC Malaysia</h3>
+                    <span class="testimonial__client">Gold Medalist</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="testimonial__description">
+                AI based GIS mapping for smart flood rescue operation.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-testimonial"></div>
+        </div>
+      </section>
+
+    <!-- ################################## GALLERY GALLERY ####################################################### -->
+
+    <section class="gallery section" id="gallery">
+      <h2 class="section__title">Gallery</h2>
+      <span class="section__subtitle">My Photos</span>
+      <div class="gallery__container container grid">
+          <!-- Example of a wide photo -->
+          <div class="gallery__item wide">
+              <img src="assets/img/img (1).jpg" alt="Photo description" class="gallery__img">
+          </div>
+
+          <!-- Example of a large photo -->
+          <div class="gallery__item large">
+            <img src="assets/img/img2 (12).jpg" alt="Photo description" class="gallery__img">
+          </div>
+          <!-- Standard size photo -->
+          <div class="gallery__item">
+            <img src="assets/img/img (8).jpg" alt="Photo description" class="gallery__img">
+          </div>
+          <!-- Another standard size photo -->
+          <div class="gallery__item">
+            <img src="assets/img/img (5).jpg" alt="Photo description" class="gallery__img">
+          </div>
+          <!-- Example of another wide photo -->
+          <div class="gallery__item wide">
+            <img src="assets/img/img (6).jpg" alt="Photo description" class="gallery__img">
+          </div>
+          <div class="gallery__item wide">
+            <img src="assets/img/img2 (4).jpg" alt="Photo description" class="gallery__img">
+          </div>
+          <!-- Example of a tall photo -->
+          <div class="gallery__item tall">
+            <img src="assets/img/img (12).jpg" alt="Photo description" class="gallery__img">
+          </div>
+          <!-- <div class="gallery__item wide"> -->
+            <!-- <img src="assets/img/img2 (2).jpg" alt="Photo description" class="gallery__img"> -->
+          <!-- </div> -->
+          <div class="gallery__item">
+            <img src="assets/img/img2 (5).jpg" alt="Photo description" class="gallery__img">
+          </div>
+          <div class="gallery__item">
+            <img src="assets/img/img2 (8).jpg" alt="Photo description" class="gallery__img">
+          </div>
+          <!-- Repeat for each photo with appropriate class as needed -->
+      </div>
+  </section>
+  
+
+
+  <!-- ############################################################################################### -->
+        
+
+      <!--==================== CONTACT ME ====================-->
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <span class="section__subtitle">Get in touch</span>
+
+        <div class="contact__container container grid">
+          <div>
+            <div class="contact__information">
+              <i class="uil uil-phone contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Call Me</h3>
+                <span class="contact__subtitle">+34 610-423-930</span>
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <i class="uil uil-envelope contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact__subtitle">adeola.jo@outlook.com</span>
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <i class="uil uil-map-marker contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Location</h3>
+                <span class="contact__subtitle"
+                  >Zajceva, 11, Zagreb, Croatia</span
+                >
+              </div>
+            </div>
+          </div>
+            <div>
+              <a
+                href="mailto:adeola.jo@outlook.com"
+                class="button button--flex"
+              >
+                Send Message
+                <i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
+
+            
+          </form>
+        </div>
+      </section>
+    </main>
+
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__container container grid">
+          <div>
+            <h1 class="footer__title">Joseph</h1>
+            <span class="footer__subtitle">Robotics Software Engineer</span>
+          </div>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#portfolio" class="footer__link">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer__link">Contact</a>
+            </li>
+            <li>
+              <a href="#about" class="footer__link">CV</a>
+            </li>
+          </ul>
+
+          <div class="footer__socials">
+            <a
+              href="https://www.facebook.com/#"
+              target="_blank"
+              class="footer__social"
+            >
+              <i class="uil uil-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/#"
+              target="_blank"
+              class="footer__social"
+            >
+              <i class="uil uil-instagram"></i>
+            </a>
+            <a
+              href="https://twitter.com/#"
+              target="_blank"
+              class="footer__social"
+            >
+              <i class="uil uil-twitter-alt"></i>
+            </a>
+          </div>
+        </div>
+        <!-- <p class="footer__copy">&#100; Joseph. All right reserved</p>  -->
+        <p class="footer__copy">Joseph. All right reserved</p> 
+      </div>
+    </footer>
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrollup" id="scroll-top">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
