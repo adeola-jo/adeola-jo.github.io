@@ -809,7 +809,7 @@ img {
 
 
 /*==================== PORTFOLIO ====================*/
-/* .portfolio__container {
+.portfolio__container {
   overflow: initial;
 }
 
@@ -866,13 +866,13 @@ img {
 .swiper-button-next,
 .swiper-pagination-bullet {
   outline: none;
-} */
+}
 
 
 
 /* ------------------------------------------------- THE NEW PORTFOLIO SECTION I AM CURRENTLY EDITING ------------------------------------- */
 /* Portfolio Section */
-/* .portfolio__tabs {
+.portfolio__tabs {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
@@ -891,9 +891,9 @@ img {
 .portfolio__tab:hover,
 .portfolio__tab--active {
   background-color: var(--first-color-alt);
-} */
+}
 
-/* .portfolio__content {
+.portfolio__content {
   display: none;
 }
 
@@ -901,170 +901,7 @@ img {
   display: block;
 }
 
- */
 
-
-
- /* ------------------THE NEW PORTFOLIO IN PROGRESS ---------------------------------------- */
- /*==================== PORTFOLIO ====================*/
-.portfolio__container {
-  overflow: initial;
-}
-
-
-.portfolio__content {
-  padding: 0 1.5rem;
-}
-
-.portfolio__img {
-  width: 265px;
-  border-radius: .5rem;
-  justify-self: center;
-}
-
-.portfolio__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5);
-}
-
-.portfolio__description {
-  margin-bottom: var(--mb-0-75);
-}
-
-.portfolio__button:hover .button__icon {
-  transform: translateX(0.25rem);
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  content: '';
-}
-
-.swiper-portfolio-icon {
-  font-size: 2rem;
-  color: var(--first-color);
-}
-
-.swiper-button-prev {
-  left: -.5rem;
-}
-
-.swiper-button-next {
-  right: -.5rem;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: -2.5rem;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: var(--first-color);
-}
-
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-pagination-bullet {
-  outline: none;
-}
-
-/* Portfolio Section */
-.portfolio__tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.portfolio__tab {
-  padding: 1rem 1rem;
-  margin: 0 0.5rem;
-  /* background-color: var(--body-color); */
-  background-color: var(--first-color);
-  color: var(--second-color);
-
-  font-weight: bolder;
-  font-size: var(--h3-font-size);
-
-  /* color: #fff; */
-  color: var(--title-color);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-
-
-
-
-/* .portfolio__tab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: var(--small-font-size);
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-}
-
-.portfolio__tab:hover {
-  color: var(--first-color);
-}
- */
-
- .portfolio__tab:hover {
-  /* background-color: var(--first-color); */
-  color: var(--first-color);
-  /* border-radius: 5px; */
-}
-
-.portfolio__tab--active {
-  /* color: #8CC92D; Gold color for the active tab text */
-  /* color: var(--first-color); */
-  color: var(--text-color);
-
-
-}
-.toggle-content {
-  display: none;
-}
-.tab--active {
-  /* Add your active tab styles here */
-  /* font-weight: bold; */
-  display: block !important;
-  /* For example */
-}
-
-
-
-/* TODO: IF A TAB IS CLICKED IT'S COLOR SHOULD CHANGE */
-
-
-
-/* .portfolio__tab:hover,
-.portfolio__tab--active {
-  background-color: var(--first-color-alt);
-} */
-
-/* Hide non-active categories */
-/* .hidden {
-  display: none;
-} */
-
-
-
-/* .tab-content {
-  display: none;
-}
-
-.tab-content--active {
-  display: block;
-}
-
-.tab-content:target {
-  display: block;
-}
-
-.tab-content:target ~ .tab-content--active:not(:target) {
-  display: none;
-} */
 
 
 /*==================== PROJECT IN MIND ====================*/

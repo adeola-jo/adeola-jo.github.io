@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Content Toggle</title>
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button onclick="showContent(1)">Button 1</button>
+        <button onclick="showContent(2)">Button 2</button>
+        <button onclick="showContent(3)">Button 3</button>
+        <button onclick="showContent(4)">Button 4</button>
+    </div>
+
+    <div id="content1" class="content">
+        <h2>Content 1</h2>
+        <p>This is the content for button 1.</p>
+    </div>
+
+    <div id="content2" class="content">
+        <h2>Content 2</h2>
+        <p>This is the content for button 2.</p>
+    </div>
+
+    <div id="content3" class="content">
+        <h2>Content 3</h2>
+        <p>This is the content for button 3.</p>
+    </div>
+
+    <div id="content4" class="content">
+        <h2>Content 4</h2>
+        <p>This is the content for button 4.</p>
+    </div>
+
+    <script>
+        function showContent(contentNumber) {
+            // Hide all content divs
+            var contents = document.getElementsByClassName('content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+
+            // Show the selected content
+            var selectedContent = document.getElementById('content' + contentNumber);
+            selectedContent.classList.add('active');
+        }
+
+        // Show the first content by default
+        showContent(1);
+    </script>
+</body>
+</html>

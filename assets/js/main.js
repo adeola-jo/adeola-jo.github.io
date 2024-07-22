@@ -107,6 +107,81 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
     },
 })
 
+
+
+
+// --------------------- THE NEW PORTFOLIO DESIGN EDIT SECTION ------------------
+/*==================== PORTFOLIO TABS ====================*/
+// document.addEventListener('DOMContentLoaded', function () {
+//     const tabs = document.querySelectorAll('.portfolio__tab');
+//     const contents = document.querySelectorAll('.portfolio__content');
+  
+//     tabs.forEach(tab => {
+//       tab.addEventListener('click', function () {
+//         // Remove active class from all tabs
+//         tabs.forEach(t => t.classList.remove('portfolio__tab--active'));
+//         // Add active class to the clicked tab
+//         tab.classList.add('portfolio__tab--active');
+  
+//         // Hide all contents
+//         contents.forEach(content => content.classList.remove('active'));
+//         contents.forEach(content => content.classList.add('hidden'));
+  
+//         // Show the targeted content
+//         const target = document.querySelector(tab.getAttribute('data-target'));
+//         target.classList.add('active');
+//         target.classList.remove('hidden');
+//       });
+//     });
+//   });
+  
+
+
+//   document.querySelectorAll('.tab').forEach(tab => {
+//     tab.addEventListener('click', function() {
+//       document.querySelector('.tab--active').classList.remove('tab--active');
+//       this.classList.add('tab--active');
+//     });
+//   });
+
+
+  function showContent(contentId) {
+    // Hide all content divs
+    document.querySelectorAll('.toggle-content').forEach(content => {
+        content.classList.remove('tab--active');
+    });
+
+    // Show the selected content
+    document.getElementById(contentId).classList.add('tab--active');
+}
+
+// Show the first content by default
+document.addEventListener('DOMContentLoaded', function() {
+    showContent('cv-projects');
+});
+
+/*==================== PORTFOLIO TABS ====================*/
+// const portfolioTabs = document.querySelectorAll('.portfolio__tab');
+// const portfolioContents = document.querySelectorAll('.portfolio__content');
+
+// portfolioTabs.forEach(tab => {
+//     tab.addEventListener('click', () => {
+//         const target = document.querySelector(tab.dataset.target);
+
+//         portfolioContents.forEach(content => {
+//             content.classList.remove('portfolio__content--active');
+//         });
+
+//         portfolioTabs.forEach(tab => {
+//             tab.classList.remove('portfolio__tab--active');
+//         });
+
+//         target.classList.add('portfolio__content--active');
+//         tab.classList.add('portfolio__tab--active');
+//     });
+// });
+
+
 /*==================== TESTIMONIAL ====================*/
 let swiperTestimonial = new Swiper('.testimonial__container', {
     loop: true,

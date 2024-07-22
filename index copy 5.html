@@ -873,282 +873,52 @@
 
 
 
-      <section class="portfolio section" id="portfolio">
-        <h2 class="section__title">Portfolio</h2>
-        <span class="section__subtitle">Recent Projects</span>
 
+<!--==================== PORTFOLIO ====================-->
+<section class="portfolio section" id="portfolio">
+  <h2 class="section__title">Portfolio</h2>
+  <span class="section__subtitle">Recent Projects</span>
 
-      <!-- Portfolio Tabs -->
-      <div class="portfolio__tabs">
-        <button onclick="showContent('cv-projects')" class="portfolio__tab portfolio__tab--active" >Computer Vision</button>
-        <button onclick="showContent('slam-projects')" class="portfolio__tab">SLAM</button>
-        <button onclick="showContent('dl-projects')" class="portfolio__tab">Deep Learning</button>
-        <button onclick="showContent('robotics')" class="portfolio__tab">Robotics</button>
-        <button onclick="showContent('robotics-projects')" class="portfolio__tab">Others</button>
+  <!-- Portfolio Tabs -->
+  <div class="portfolio__tabs">
+    <button class="portfolio__tab portfolio__tab--active" data-target="#computer-vision">Computer Vision Projects</button>
+    <button class="portfolio__tab" data-target="#slam">SLAM Projects</button>
+    <button class="portfolio__tab" data-target="#deep-learning">Deep Learning Projects</button>
+    <button class="portfolio__tab" data-target="#others">Other Projects</button>
+  </div>
 
-      </div>
-
-      <!-- <div class="portfolio__tabs">
-        <a href="javascript:void(0);" onclick="showContent('cv-projects');" class="portfolio__tab portfolio__tab--active">Computer Vision</a>
-        <a href="javascript:void(0);" onclick="showContent('slam-projects');" class="portfolio__tab">SLAM</a>
-        <a href="javascript:void(0);" onclick="showContent('dl-projects');" class="portfolio__tab">Deep Learning</a>
-        <a href="javascript:void(0);" onclick="showContent('robotics');" class="portfolio__tab">Robotics</a>
-        <a href="javascript:void(0);" onclick="showContent('robotics');" class="portfolio__tab">Others</a>
-      </div> -->
-      
-
-      <div id="cv-projects" class="portfolio__container container swiper-container toggle-content tab--active">
-          <div class="swiper-wrapper">
-
-            <!--=============== CV Project 1 ===============-->
-            <div class="portfolio__content grid swiper-slide">
-              <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">
-                  Stereo Visual Odometry on the KITTI Dataset
-                </h3>
-                <p class="portfolio__description">
-                  Description: This project focuses on reconstruction of vehicle tr
-                </p>
-<!-- Code Button with GitHub Icon -->
-                <a href="https://github.com/AdeolaJoseph/Stereo-Visual-Odometry" target="_blank" class="button button--flex button--small portfolio__button">
-                  <i class="fab fa-github"></i> Code
-                </a>
-
-                <!-- Report Button (assuming you might want a file icon or similar) -->
-                <!-- <a href="https://www.sciencedirect.com/science/article/pii/S221067072030593X" target="_blank" class="button button--flex button--small portfolio__button">
-                  <i class="fas fa-file-alt"></i> Report
-                </a>
-
-                <a href="https://www.sciencedirect.com/science/article/pii/S221067072030593X" target="_blank" class="button button--flex button--small portfolio__button">
-                  <i class="fas fa-file-alt"></i> Slides
-                </a> -->
-
-
-              </div>
-            </div>
-
-             <!--=============== CV Project 2 ===============-->
-             <div class="portfolio__content grid swiper-slide">
-              <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">
-                  Integrated Machine Vision Application with the Stäubli TX60 Robot
-                </h3>
-                <p class="portfolio__description">
-                  Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
-                </p>
-                <a
-                  href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next">
-            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-          </div>
-          <div class="swiper-button-prev">
-            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-     
-
-      <!-- ========================= SLAM Projects ========================= -->
-      <div id="slam-projects" class="portfolio__container container swiper-container toggle-content tab--active">
-        <div class="swiper-wrapper">
-
-          <!--=============== CV Project 1 ===============-->
-          <div class="portfolio__content grid swiper-slide">
-            
-            <img
-            src="assets/img/paperCov.jpg"
-            alt=""
-            class="portfolio__img"
-          />
-
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">
-                EKF-SLAM Implementation with 2D LiDAR and IMU sensors
-              </h3>
-              <p class="portfolio__description">
-                Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
-              </p>
-              <a
-                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
-                class="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-
-           <!--=============== CV Project 2 ===============-->
-           <div class="portfolio__content grid swiper-slide">
+  <!-- Portfolio Content -->
+  <div class="portfolio__content portfolio__content--active" id="computer-vision">
+    <div class="portfolio__container container swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 for Computer Vision Projects -->
+        <div class="portfolio__content grid swiper-slide">
+          <div class="video-container">
             <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">
-                EKF-SLAM Implementation with 2D LiDAR and IMU sensors
-              </h3>
-              <p class="portfolio__description">
-                Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
-              </p>
-              <a
-                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
-                class="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
+          </div>
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">EKF-SLAM Implementation with 2D LiDAR and IMU sensors</h3>
+            <p class="portfolio__description">
+              Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
+            </p>
+            <a href="https://www.sciencedirect.com/science/article/pii/S221067072030593X" class="button button--flex button--small portfolio__button">
+              Demo
+              <i class="uil uil-arrow-right button__icon"></i>
+            </a>
           </div>
         </div>
-        <div class="swiper-button-next">
-          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-        </div>
-        <div class="swiper-button-prev">
-          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-        </div>
-        <div class="swiper-pagination"></div>
+        <!-- Add more slides as needed -->
       </div>
-   
+      <div class="swiper-button-next"><i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
+      <div class="swiper-button-prev"><i class="uil uil-angle-left-b swiper-portfolio-icon"></i></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
 
+  <!-- Repeat similar structure for other project categories -->
+  <!-- SLAM Projects, Deep Learning Projects, Other Projects -->
+</section>
 
-
-      
-        
-      <!-- ========================== DEEP LEARNING PROJECTS ========================= -->
-      <div id="dl-projects" class="portfolio__container container swiper-container toggle-content tab--active">
-        <div class="swiper-wrapper">
-
-          <!--=============== CV Project 1 ===============-->
-          <div class="portfolio__content grid swiper-slide">
-            
-            <img
-            src="assets/img/paperCov.jpg"
-            alt=""
-            class="portfolio__img"
-          />
-
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">
-                EKF-SLAM Implementation with 2D LiDAR and IMU sensors
-              </h3>
-              <p class="portfolio__description">
-                Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
-              </p>
-              <a
-                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
-                class="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-
-           <!--=============== CV Project 2 ===============-->
-           <div class="portfolio__content grid swiper-slide">
-            <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">
-                EKF-SLAM Implementation with 2D LiDAR and IMU sensors
-              </h3>
-              <p class="portfolio__description">
-                Description: This initiative sought to implement an innovative ICP scan-matching-based EKF for SLAM, using 2D LiDAR and IMU sensors for advanced real-time localization and mapping in varied indoor environments.
-              </p>
-              <a
-                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
-                class="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-next">
-          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-        </div>
-        <div class="swiper-button-prev">
-          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-   
-
-
-      <!-- ==================== OTHER PROJECTS ================= -->
-      <div id="robotics" class="portfolio__container container swiper-container toggle-content tab--active">
-        <div class="swiper-wrapper">
-
-          <!--=============== CV Project 1 ===============-->
-          <div class="portfolio__content grid swiper-slide">
-            
-            <img
-            src="assets\projects\robotics\human-swarm-interaction-using-llms\HRI_Pipeline.png"
-            alt=""
-            class="portfolio__img"
-          />
-
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">
-              Multi-Modal Human-Swarm Interaction Using Vision, Speech & Multi-Agent LLMs
-              </h3>
-              <p class="portfolio__description">
-                Description: Controlling a swarm of omnidirectional robots using multi-modal techniques.
-              </p>
-              <a href="https://drive.google.com/drive/folders/1XM-vsduA-TXC_88UCu2qsBz0QXbR68oI" target="_blank" class="button button--flex button--small portfolio__button">
-                <i class="fab fa-github"></i> Demo
-              </a>
-
-              <!-- Report Button (assuming you might want a file icon or similar) -->
-              <a href="https://drive.google.com/file/d/1h6QMTAdxbi3cnmJCeh4XR5vvBq08i8Fl/view" target="_blank" class="button button--flex button--small portfolio__button">
-                <i class="fas fa-file-alt"></i> Report
-              </a>
-
-              <a href="https://docs.google.com/presentation/d/1ZfhdezTUXDK6KagSSJFdSf0vnmEyWE0-/edit#slide=id.p1" target="_blank" class="button button--flex button--small portfolio__button">
-                <i class="fas fa-file-alt"></i> Slides
-              </a>
-
-            </div>
-          </div>
-
-           <!--=============== CV Project 2 ===============-->
-           <div class="portfolio__content grid swiper-slide">
-            <iframe src="https://www.youtube.com/embed/n7EWEcRAJds?si=NXNPDCXW_lsPcmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="portfolio__img"></iframe>
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">
-              Robust Coordination and Control of Multi-Robot Systems Using Consensus Protocols
-              </h3>
-              <p class="portfolio__description">
-                Developed consensus-based control strategies for multi-robot systems, focusing on rendezvous and formation control, using graph theory and dual simulations with Pygame, Stage Simulator, and ROS
-              </p>
-              <a
-                href="https://www.sciencedirect.com/science/article/pii/S221067072030593X"
-                class="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-next">
-          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-        </div>
-        <div class="swiper-button-prev">
-          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-   
-      </section>
 
 
 
