@@ -975,7 +975,7 @@ img {
 }
 
 .portfolio__tab {
-  padding: 1rem 1rem;
+  padding: 0.5rem 0.5rem;
   margin: 0 0.5rem;
   /* background-color: var(--body-color); */
   background-color: var(--first-color);

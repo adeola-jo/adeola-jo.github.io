@@ -881,21 +881,51 @@
 
 
 
+
       <section class="portfolio section" id="portfolio">
         <h2 class="section__title">Portfolio</h2>
         <span class="section__subtitle">Recent Projects</span>
+
+
+      <!-- Portfolio Tabs. The butons used for navigation share the same style with 
+       the qualification section that's why there's some sort of repetition -->
+      <div class="qualification__container container">
         <p>🚧 <strong>Notice:</strong> This section is still under development. Stay tuned for more updates and improvements! 🛠️</p>
 
+          <div class="qualification__tabs">
+            <div class="qualification__button button--flex qualification__active" onclick="showContent('cv-projects')">
+              <i class="uil uil-desktop qualification__icon"></i>
+              Computer Vision
+            </div>
+            <div class="qualification__button button--flex" onclick="showContent('slam-projects')">
+              <i class="uil uil-map qualification__icon"></i>
+              SLAM
+            </div>
+            <div class="qualification__button button--flex" onclick="showContent('dl-projects')">
+              <i class="uil uil-brain qualification__icon"></i>
+              AI & ML
+            </div>
+            <div class="qualification__button button--flex" onclick="showContent('robotics')">
+              <i class="uil uil-robot qualification__icon"></i>
+              Robotics
+            </div>
 
-      <!-- Portfolio Tabs -->
-      <div class="portfolio__tabs">
-        <button onclick="showContent('cv-projects')" class="portfolio__tab portfolio__tab--active" >Computer Vision</button>
-        <button onclick="showContent('slam-projects')" class="portfolio__tab">SLAM</button>
-        <button onclick="showContent('dl-projects')" class="portfolio__tab">Deep Learning</button>
-        <button onclick="showContent('robotics')" class="portfolio__tab">Robotics</button>
-        <button onclick="showContent('robotics-projects')" class="portfolio__tab">Others</button>
+<!--             
+            <div class="qualification__button button--flex" onclick="showContent('robotics-projects')">
+              <i class="uil uil-apps qualification__icon"></i>
+              Others
+            </div> -->
+          </div>
+        </div>
 
-      </div>
+
+      <!-- <div class="qualification__tabs">
+        <button onclick="showContent('cv-projects')" class="qualification__button button--flex qualification__active" >Computer Vision</button>
+        <button onclick="showContent('slam-projects')" class="qualification__button button--flex qualification__active">SLAM</button>
+        <button onclick="showContent('dl-projects')" class="qualification__button button--flex qualification__active">Deep Learning</button>
+        <button onclick="showContent('robotics')" class="qualification__button button--flex qualification__active">Robotics</button>
+        <button onclick="showContent('robotics-projects')" class="qualification__button button--flex qualification__active">Others</button>
+      </div> -->
 
       <!-- <div class="portfolio__tabs">
         <a href="javascript:void(0);" onclick="showContent('cv-projects');" class="portfolio__tab portfolio__tab--active">Computer Vision</a>
