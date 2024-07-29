@@ -907,6 +907,11 @@ img {
 
  /* ------------------THE NEW PORTFOLIO IN PROGRESS ---------------------------------------- */
  /*==================== PORTFOLIO ====================*/
+
+ .hidden-section {
+  display: none;
+ }
+ 
 .portfolio__container {
   overflow: initial;
 }
